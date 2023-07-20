@@ -16,7 +16,7 @@ model = VGGFace(model = 'resnet50',include_top=False, input_shape=(224,224,3),po
 detector=MTCNN()
 
 #Face Deteaction
-sample_img = cv2.imread('sample/salman_dup.png')
+sample_img = cv2.imread('sample/Ritesh.jpeg')
 results = detector.detect_faces(sample_img)
 x,y,width,height = results[0]['box']
 face = sample_img[y:y+height,x:x+width]
